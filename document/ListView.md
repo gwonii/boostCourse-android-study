@@ -21,7 +21,7 @@
 
 **singer_item.xml**
 
-```java
+```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
@@ -72,7 +72,7 @@
 
 **SingerItemView**.java
 
-```java
+```
 public class SingerItemView extends LinearLayout {
 
     TextView textView1;
@@ -118,7 +118,7 @@ public class SingerItemView extends LinearLayout {
 
 
 
-**기본 생성자***
+**기본 생성자**
 
 ```java
     public SingerItemView(Context context) {
