@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         View view3 = findViewById(R.id.v_button3);
 
         view3.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-
                 Toast.makeText(MainActivity.this, "안녕하세요", Toast.LENGTH_LONG).show();
             }
         });
