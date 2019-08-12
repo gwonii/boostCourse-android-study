@@ -23,19 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
-```java
-/** DoCommentActivity **//
-
-import static com.gmail.hc.gwnoii.mymovie_11.controller.MainActivity.adapter;
-    
-    
-private void addComment(String comment) {
-        adapter.addItem(new CommentItem("anonymouse", "20분 전", comment,"1"));
-    }
-```
-
-> `DoCommentActivity`는 static 변수인 `adapter`를 자유자재로 사용할 수 있었다.
-
 > 원초적인 생각으로, 리스트뷰는 어댑터에서 관리를 하니까 어댑터의 정보를 다른 액티비티에서도 사용하게 할 수 있도록 static 변수로 지정하였다. 그런데 이러면 나중에 **동기의 문제**가 생길 수도 있고 잘못하면 **메모리 누수**가 생길 수도 있다.  
 
 <br/>
@@ -45,44 +32,12 @@ private void addComment(String comment) {
 	코멘트를 작성할 수 있는 액티비티 창 	
 **/
 
-public class DoCommentActivity extends AppCompatActivity {
-
-    private Button saveButton;
-    private Button cancelButton;
-    private EditText commentText;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_do_comment);
-
-        saveButton = findViewById(R.id.btSave);
-        cancelButton = findViewById(R.id.btCancel);
-        commentText = findViewById(R.id.etDoComment);
-
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String comment = commentText.getText().toString();
-
-                addComment(comment);
-                finish();
-            }
-        });
-
-        cancelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-
-    }
-
-    private void addComment(String comment) {
+import static com.gmail.hc.gwnoii.mymovie_11.controller.MainActivity.adapter;
+    
+    
+private void addComment(String comment) {
         adapter.addItem(new CommentItem("anonymouse", "20분 전", comment,"1"));
     }
-}
 ```
 
 > 그런 후에 다른 액티비티에서 adater변수를 사용하기 위하여 `addComment()`의 메소드를 사용하여 `adapter.addItem(new CommentItem("anonymouse", "20분 전", comment,"1"))` `MainActivity.class`에 있는 adapter변수에 직접 접근하여 사용하였다. 
