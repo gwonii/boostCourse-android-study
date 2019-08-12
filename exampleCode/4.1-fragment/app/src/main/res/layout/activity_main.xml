@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:text="toMain!" />
+
+    <Button
+        android:id="@+id/btMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/btMain"
+        android:text="toMenu!" />
+
+
+    <FrameLayout
+        android:id="@+id/flSub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btMain">
+
+
+<!--
+        <fragment
+            android:id="@+id/fgSub"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.gmail.hc.gwnoii.fragment.MainFragment"/>
+-->
+
+    </FrameLayout>
+
+</RelativeLayout>
