@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     int value;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     String curString = "현재 값 : " + value;
-                                   result.setText(curString);
+                                    result.setText(curString);
                                 }
                             });
 
