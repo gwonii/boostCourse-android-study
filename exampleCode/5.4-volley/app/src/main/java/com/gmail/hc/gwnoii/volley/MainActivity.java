@@ -34,9 +34,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sendRequest();
+
+                requestButton.setText();
             }
         });
-
 
         if (AppHelper.requestQueue == null) {
             AppHelper.requestQueue = Volley.newRequestQueue(getApplicationContext());

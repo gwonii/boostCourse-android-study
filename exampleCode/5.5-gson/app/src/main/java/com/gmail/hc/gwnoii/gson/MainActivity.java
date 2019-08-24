@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         println("응답 --> " + response);
-//                        processResponse(response);
+                        processResponse(response);
                     }
                 },
                 new Response.ErrorListener() {
